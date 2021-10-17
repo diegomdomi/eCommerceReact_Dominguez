@@ -1,4 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const Elemento = ()=> <p>Hola Mundo</p>
-ReactDOM.render(<Elemento/> , document.getElementById('root'))
+import App from "./App"
+import 'materialize-css/dist/css/materialize.min.css'
+ReactDOM.render(<App/> , document.getElementById('root'))
