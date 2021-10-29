@@ -1,0 +1,38 @@
+
+[
+     {
+    "id": 1,
+    "title": "Torta de chocolate",
+    "description" : "Delicada torta de chocolate rellana de dulce de leche",
+    "price": "$3000",
+    "img": "/img/tortachocolate"
+},
+
+{
+    "id": 2,
+    "title": "Tarta de arándanos",
+    "description" :"Fresca tarta de arándanos patagónicos",
+    "price": "$2500" ,
+    "img": "/img/arandanos"
+
+
+},
+{
+    "id": 3,
+    "title": "Alfajores",
+    "description": "Alfajores artesanales elvarados con productos orgánicos",
+    "price":"$1000" ,
+    "img": "/img/alfajor"
+
+
+},
+{
+    "id": 4,
+    "title": "Torta de frutos rojos",
+    "description" :"Delicioso Cheese Cake de frutos rojos",
+    "price": "$2000" ,
+    "img": "/img/tortafrutosrojos"
+
+
+}
+]
