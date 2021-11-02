@@ -1,19 +1,18 @@
 import ItemCount from "./ItemCounts"
-
-const Item = ({id,nombre,description,price, img}) => {
-
+import {useEffect} from "react"
+const ItemDetail = ({productos}) => {
+    useEffect(() => {
+      }, []);
     return(
         <>
         <div className="container">
         <div className="row ">
-            <div className="col s12 m6">
+            <div className="col s12 m5">
                 <div className="card ">
                     <div className="card image">  
-                        {/* <p>{id}</p> */}
-                        <h4>{nombre}</h4>
-                        <p>{description}</p>
-                        <p>{price}</p>
-                        <img src={img} alt="img" width="300px"/>
+                        <p>{productos.detail}</p>
+                        <h4>{productos.precio}</h4>
+                        <img src={productos.img} alt="img" width="300px"/> 
                         <ItemCount stock="5" initial="1"/>
                     </div>
                 </div>
@@ -26,4 +25,4 @@ const Item = ({id,nombre,description,price, img}) => {
     )
 }
 
-export default Item
+export default ItemDetail

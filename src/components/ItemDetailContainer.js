@@ -1,26 +1,26 @@
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetails";
 
-const ItemListContainer = (greeting)=>{
+const ItemDetailContainer = ({id})=>{
 
   const [productos, setProductos] = useState([]);
 
-  const productos_json = ()=>{
+  const getItem = ()=>{
     fetch("./productos.json")
     .then(function (response){
      return response.json();
     }) 
     
     .then(function (data){
-      setProductos(data);
+      const found = data.find(element => element.id === id)
+      console.log(found)
+      setProductos(found);
     })
-
   } 
-  
-
+     
   useEffect(() => {
     setTimeout(() => {
-      productos_json();
+      getItem();
     }, 2000);
   }, []);
 
@@ -45,14 +45,14 @@ const ItemListContainer = (greeting)=>{
   else{
     return (
      <> 
-    <h3 className="blue-text text-darken-2"> Tienda {greeting.text}!</h3>
+    {/* <h3 className="blue-text text-darken-2"> Tienda {greeting.text}!</h3> */}
     
-    <ItemList productos={productos} />
+    <ItemDetail productos={productos}  />
 
     </>
     )
 
   }
   }
-  export default  ItemListContainer 
+  export default  ItemDetailContainer 
   

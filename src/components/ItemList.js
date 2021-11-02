@@ -5,7 +5,7 @@ import { useEffect } from "react"
 const ItemList = ({productos}) => {
     useEffect(()=>{console.log(productos)}, [])
 return (
-    <div>
+    <div className="container">
         {
             productos.map(producto =>{
                 return <>
@@ -17,7 +17,6 @@ return (
                         img= {producto.img}
 
                         />
-                        <ItemCount stock="5" initial="1"/>
                     </>
             })
             
