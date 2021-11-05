@@ -1,4 +1,5 @@
 import ItemCount from "./ItemCounts"
+import {Link} from "react-router-dom"
 
 const Item = ({id,nombre,description,price, img}) => {
 
@@ -13,14 +14,15 @@ const Item = ({id,nombre,description,price, img}) => {
                         <h4>{nombre}</h4>
                         <p>{description}</p>
                         <p>{price}</p>
+                    <Link to={`/item/`+ id}>
                         <img src={img} alt="img" width="300px"/>
+                    </Link>
                         <ItemCount stock="5" initial="1"/>
                     </div>
                 </div>
             </div>
         </div>
         </div>
-
 
         </>
     )

@@ -1,13 +1,11 @@
 import ItemCount from "./ItemCounts"
-import {useEffect} from "react"
 const ItemDetail = ({productos}) => {
-    useEffect(() => {
-      }, []);
+   
     return(
         <>
         <div className="container">
         <div className="row ">
-            <div className="col s12 m5">
+            <div className="col s12 m6">
                 <div className="card ">
                     <div className="card image">  
                         <p>{productos.detail}</p>

@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-
+import {useParams}  from "react-router-dom"
 const ItemListContainer = (greeting)=>{
+  const {id}= useParams()
 
   const [productos, setProductos] = useState([]);
 
   const productos_json = ()=>{
-    fetch("./productos.json")
+    fetch("https://mocki.io/v1/aff37951-4fc2-41ac-b437-fefb86a8f3f9")
     .then(function (response){
      return response.json();
     }) 
     
     .then(function (data){
-      setProductos(data);
+      if(id){
+        let found = data.filter(element => element.id === Number(id))
+        setProductos(found);
+      }
+      else {
+        setProductos(data);
+      }
     })
 
   } 

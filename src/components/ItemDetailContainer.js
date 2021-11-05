@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetails";
+import {useParams}  from "react-router-dom"
 
-const ItemDetailContainer = ({id})=>{
-
+const ItemDetailContainer = (greeting)=>{
+  
+  const{id} = useParams()
   const [productos, setProductos] = useState([]);
 
   const getItem = ()=>{
-    fetch("./productos.json")
+    fetch("https://mocki.io/v1/aff37951-4fc2-41ac-b437-fefb86a8f3f9")
     .then(function (response){
      return response.json();
     }) 
     
     .then(function (data){
-      const found = data.find(element => element.id === id)
-      console.log(found)
-      setProductos(found);
+      if(id){
+        const found = data.find(element => element.id === Number(id))
+        setProductos(found)
+      }else{
+        setProductos(data);
+      }
+
+
     })
   } 
      
@@ -45,7 +52,7 @@ const ItemDetailContainer = ({id})=>{
   else{
     return (
      <> 
-    {/* <h3 className="blue-text text-darken-2"> Tienda {greeting.text}!</h3> */}
+    <h3 className="blue-text text-darken-2"> Tienda {greeting.text}!</h3>
     
     <ItemDetail productos={productos}  />
 
