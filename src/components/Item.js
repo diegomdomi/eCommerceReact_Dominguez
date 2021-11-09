@@ -17,7 +17,7 @@ const Item = ({id,nombre,description,price, img}) => {
                     <Link to={`/item/`+ id}>
                         <img src={img} alt="img" width="300px"/>
                     </Link>
-                        <ItemCount stock="5" initial="1"/>
+                        {/* <ItemCount stock="5" initial="1"/> */}
                     </div>
                 </div>
             </div>

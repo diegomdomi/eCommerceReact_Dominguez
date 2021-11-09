@@ -1,5 +1,4 @@
 import Item from "./Item.js"
-import ItemCount from "./ItemCounts.js"
 import { useEffect } from "react"
 
 const ItemList = ({productos}) => {

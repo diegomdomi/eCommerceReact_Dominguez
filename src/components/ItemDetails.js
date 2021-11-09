@@ -1,7 +1,15 @@
 import ItemCount from "./ItemCounts"
+import {useState}   from "react"
+
 const ItemDetail = ({productos}) => {
+    const [counterFromChild,setCounterFromChild] = useState([])
    
-    return(
+    const receiveCountFromChild=(props)=>{
+        console.log(props)
+        setCounterFromChild(props)
+
+    }
+        return(
         <>
         <div className="container">
         <div className="row ">
@@ -11,7 +19,7 @@ const ItemDetail = ({productos}) => {
                         <p>{productos.detail}</p>
                         <h4>{productos.precio}</h4>
                         <img src={productos.img} alt="img" width="300px"/> 
-                        <ItemCount stock="5" initial="1"/>
+                        <ItemCount stock="5" initial="1" onAdd={receiveCountFromChild}/>
                     </div>
                 </div>
             </div>
