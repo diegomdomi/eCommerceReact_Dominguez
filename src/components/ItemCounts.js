@@ -19,8 +19,8 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     return(
         <>
         <div className="container"> 
-        <button onClick={incrementar} >Sumar</button>
-        <button onClick={decrementar} >Restar</button>
+        <button onClick={incrementar} >+</button>
+        <button onClick={decrementar} >-</button>
         <NavLink  to="/cart">
         <button  disabled={contador <= 0} onClick={() => onAdd(contador)} className="waves-effect waves-light btn">Agregar al Carrito</button>
         </NavLink>

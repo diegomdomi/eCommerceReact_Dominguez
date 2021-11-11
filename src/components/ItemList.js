@@ -5,6 +5,7 @@ const ItemList = ({productos}) => {
     useEffect(()=>{console.log(productos)}, [])
 return (
     <div className="container">
+    <div className="row">
         {
             productos.map(producto =>{
                 return <>
@@ -20,6 +21,7 @@ return (
             })
             
         } 
+    </div>
     </div>
     
 )    
