@@ -1,5 +1,4 @@
 import {useState} from "react"
-import {NavLink}  from "react-router-dom"
 
 const ItemCount = ({stock, initial, onAdd}) =>{
 
@@ -20,13 +19,14 @@ const ItemCount = ({stock, initial, onAdd}) =>{
         
     return(
         <>
-        <div className="container"> 
+        <div className="container contador"> 
+        <div className="divider"></div>
+        <div className="section"> 
         <button onClick={incrementar} >+</button>
         <button onClick={decrementar} >-</button>
-        <NavLink  to="/cart">
-        <button  disabled={contador <= 0} onClick={() => onAdd(contador)} className="waves-effect waves-light btn">Comprar</button>
-        </NavLink>
+        <button disabled={contador <= 0} onClick={() => onAdd(contador)} className="waves-effect waves-light btn"style={{"margin": "10px"}}>Confirmar</button>
         <p>Cantidad {contador}</p>
+        </div>
         </div>
         </>
 

@@ -1,5 +1,7 @@
 import CartWidget from "./CartWidget" 
-import {NavLink  } from "react-router-dom"
+import {NavLink, Switch, Link} from "react-router-dom"
+
+
 const NavBar = () => {
     return(
         <header>
@@ -7,10 +9,10 @@ const NavBar = () => {
                 <div class="nav-wrapper container">
                 <NavLink  to="/" exact class="brand-logo" > Almacén Pastelero</NavLink>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><NavLink to="/category/1 " exact >Chocolate</NavLink></li>
-                <li><NavLink to ="/category/2"exact>Frutas</NavLink></li>
+                <li>< NavLink exact to="/category/1">Chocolate</NavLink></li>
+                <li>< NavLink exact to ="/category/2">Frutal</NavLink></li>
                 <li><NavLink to ="/Contacto/">Contacto</NavLink></li>
-                <CartWidget/>
+                <li><NavLink to="/cart"><CartWidget/></NavLink></li>
                 </ul>
                 </div>
             </nav>

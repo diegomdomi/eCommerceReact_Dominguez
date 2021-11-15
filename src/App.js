@@ -15,11 +15,8 @@ const App = ()=> {
     { <Route exact path="/category/:id"><ItemListContainer text="on line" /></Route> }
     { <Route exact path="/item/:id" > <ItemDetailContainer text="on line" /></Route> }
     { <Route exact path="/cart"><Cart></Cart></Route>}
-  
     </CustomProvider> 
-    {/* <ItemListContainer text="on line"/
-    <ItemDetailContainer id={1}/>*/ }
-   </BrowserRouter>
+    </BrowserRouter>
     
   )
 }

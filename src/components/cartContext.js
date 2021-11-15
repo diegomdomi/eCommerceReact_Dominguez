@@ -6,19 +6,20 @@ export const{Provider} = contexto
 export const CustomProvider = ({children})=>{
     const [cart,setCart] = useState([])
 
-    const agregarProducto = (producto , cantidad, id , img ) => {
+    const agregarProducto = (producto,cantidad,id,img,price ) => {
         if(isInCart(id)){
             setCart(cart.map(item=>{
                 if(item.id === id){
-                    item.cantidad += cantidad
+                item.cantidad += cantidad
                 }
                 return item
             }))
         }else{
-            setCart([...cart , {producto , cantidad , id , img }])
+            setCart([...cart , {producto,cantidad,id,img,price }])
 
         }
     }
+
     const isInCart=(id)=> {
         return cart.find(item=>item.id === id)
     }
@@ -28,13 +29,23 @@ export const CustomProvider = ({children})=>{
         setCart(nuevoArray)
        
     }
+
+    const counterWidget = () => {
+        return cart.reduce((a,b)=>  (a += b.cantidad),0)
+    }
+    const totalCount =()=> {
+        return cart.reduce((a,b)=>(a += (b.cantidad*b.price)),0)
+    }
+
     const vaciarCarrito = () => { setCart([])}
 
     const valorContexto = {
         cart : cart,
         agregarProducto : agregarProducto,
         borrarProducto : borrarProducto,
-        vaciarCarrito : vaciarCarrito
+        vaciarCarrito : vaciarCarrito,
+        counterWidget : counterWidget,
+        totalCount : totalCount,
     }
 
     return(

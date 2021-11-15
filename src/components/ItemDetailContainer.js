@@ -8,7 +8,7 @@ const ItemDetailContainer = (greeting)=>{
   const [productos, setProductos] = useState([]);
 
   const getItem = ()=>{
-    fetch("https://mocki.io/v1/aff37951-4fc2-41ac-b437-fefb86a8f3f9")
+    fetch("https://mocki.io/v1/004be0d0-faee-458b-8bfc-f58bfaff8909")
     .then(function (response){
      return response.json();
     }) 
