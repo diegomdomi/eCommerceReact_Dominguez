@@ -18,8 +18,7 @@ const Item = ({id,nombre,description,price,img}) => {
                         <p align="center">$ {price}</p>
                     </div>
                     
-                        {/* <ItemCount stock="5" initial="1"/> */}
-                </div>
+                 </div>
         </div>
 
         </>

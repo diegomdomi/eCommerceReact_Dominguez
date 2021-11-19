@@ -38,9 +38,10 @@ const Cart = ()=>{
                 <div class="col s6 offset-s6">
                     <span class="flow-text">
                         <p>Total a pagar $ {totalCount()}</p>
-                        <button disabled={cart <= 0} onClick={vaciarCarrito}>vaciar carrito</button>
+                        <NavLink to="/"> <button>Seguir comprando</button></NavLink>
                         <button style={{"margin": "10px", "color":"green"}}>Finalizar compra</button>
                     </span>
+                        <button disabled={cart <= 0} onClick={vaciarCarrito}>vaciar carrito</button>
                 </div>
             </div>
             

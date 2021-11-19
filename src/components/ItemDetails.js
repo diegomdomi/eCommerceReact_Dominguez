@@ -5,6 +5,7 @@ import {useContext} from "react"
 import {NavLink}  from "react-router-dom"
 
 
+
 const ItemDetail = ({productos}) => {
     const {agregarProducto} = useContext(contexto)
     const [mostrar ,setMostrar] = useState(false)
@@ -19,7 +20,7 @@ const ItemDetail = ({productos}) => {
         <>
         <div className="container">
           <div className="row ">
-             <div class="col s4">
+             <div className="col s4">
                 <div className="card ">
                     <div className="card-image"> 
                         <h5 align="center">{productos.title}</h5> 

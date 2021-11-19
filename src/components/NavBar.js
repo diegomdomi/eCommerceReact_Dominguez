@@ -9,8 +9,8 @@ const NavBar = () => {
                 <div class="nav-wrapper container">
                 <NavLink  to="/" exact class="brand-logo" > Almacén Pastelero</NavLink>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>< NavLink exact to="/category/1">Chocolate</NavLink></li>
-                <li>< NavLink exact to ="/category/2">Frutal</NavLink></li>
+                <li>< NavLink exact to="/item/XqwiIxpeY5BA0cm5IdiS">Chocolate</NavLink></li>
+                <li>< NavLink exact to ="/item/eWD3czvxoKZjSkLEXViP">Frutal</NavLink></li>
                 <li><NavLink to ="/Contacto/">Contacto</NavLink></li>
                 <li><NavLink to="/cart"><CartWidget/></NavLink></li>
                 </ul>

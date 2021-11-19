@@ -33,6 +33,7 @@ export const CustomProvider = ({children})=>{
     const counterWidget = () => {
         return cart.reduce((a,b)=>  (a += b.cantidad),0)
     }
+    
     const totalCount =()=> {
         return cart.reduce((a,b)=>(a += (b.cantidad*b.price)),0)
     }
