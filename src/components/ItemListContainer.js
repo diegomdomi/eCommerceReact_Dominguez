@@ -20,31 +20,6 @@ const ItemListContainer = (greeting)=>{
               })
   },[])
 
-  // const productos_json = ()=>{
-  //   fetch("https://mocki.io/v1/004be0d0-faee-458b-8bfc-f58bfaff8909")
-  //   .then(function (response){
-  //    return response.json();
-  //   }) 
-    
-  //   .then(function (data){
-  //     if(id){
-  //       let found = data.filter(element => element.id === Number(id))
-  //       setProductos(found);
-  //     }
-  //     else {
-  //       setProductos(data);
-  //     }
-  //   })
-
-  // } 
-   
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     productos_json();
-  //   }, 2000);
-  // }, []);
-
 
   
   if(productos.length === 0) {

@@ -11,7 +11,6 @@ const ItemDetail = ({productos}) => {
     const [mostrar ,setMostrar] = useState(false)
    
     const receiveCountFromChild=(props)=>{
-        console.log(props)
         agregarProducto(productos.title , props , productos.id , productos.img , productos.price)
         setMostrar(!mostrar)
 

@@ -2,9 +2,10 @@ import {contexto}  from "./cartContext.js"
 import {useContext} from "react"
 import{NavLink} from "react-router-dom"
 
-const Cart = ()=>{
 
-    const {cart , vaciarCarrito , borrarProducto,totalCount} = useContext(contexto)
+const Cart = ()=>{
+    const {cart,vaciarCarrito,borrarProducto,totalCount,finalizarCompra} = useContext(contexto)
+
     if(cart.length === 0){
         return (
             <h4>Tu carrito está vacío, para acceder al catálogo hacé
@@ -39,7 +40,7 @@ const Cart = ()=>{
                     <span class="flow-text">
                         <p>Total a pagar $ {totalCount()}</p>
                         <NavLink to="/"> <button>Seguir comprando</button></NavLink>
-                        <button style={{"margin": "10px", "color":"green"}}>Finalizar compra</button>
+                       <NavLink to="/formulario"><button onClick={finalizarCompra} style={{"margin": "10px", "color":"green"}}>Finalizar compra</button></NavLink>
                     </span>
                         <button disabled={cart <= 0} onClick={vaciarCarrito}>vaciar carrito</button>
                 </div>
@@ -47,7 +48,6 @@ const Cart = ()=>{
             
         </div>
       
-        
         
      </>           
     )

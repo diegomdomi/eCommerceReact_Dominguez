@@ -1,10 +1,12 @@
 import {createContext, useState} from "react"
-
+import firebase from "firebase/app";
+import {firestore}  from "./firebase"
 export const contexto = createContext()
 export const{Provider} = contexto
 
 export const CustomProvider = ({children})=>{
     const [cart,setCart] = useState([])
+    const [respuesta, setRespuesta] = useState([])
 
     const agregarProducto = (producto,cantidad,id,img,price ) => {
         if(isInCart(id)){
@@ -40,6 +42,32 @@ export const CustomProvider = ({children})=>{
 
     const vaciarCarrito = () => { setCart([])}
 
+
+    const  finalizarCompra = ()=>{
+        const usuario = {
+            nombre : "Diego",
+            email : "diegomdomi@gmail.com",
+            telefono : "4545454545",
+        }
+
+        const orden = {
+            buyer : usuario,
+            items : cart,
+            date : firebase.firestore.Timestamp.fromDate(new Date()),
+            total :totalCount()
+        }
+
+            const db = firestore
+            const collection = db.collection("ordenes")
+            const query = collection.add(orden)
+            query  
+            .then((response)=>{
+                setRespuesta(response.id)
+            }) ;
+                
+          
+         vaciarCarrito()               
+    }
     const valorContexto = {
         cart : cart,
         agregarProducto : agregarProducto,
@@ -47,6 +75,8 @@ export const CustomProvider = ({children})=>{
         vaciarCarrito : vaciarCarrito,
         counterWidget : counterWidget,
         totalCount : totalCount,
+        finalizarCompra : finalizarCompra,
+        respuesta : respuesta,
     }
 
     return(

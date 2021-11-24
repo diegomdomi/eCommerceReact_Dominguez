@@ -18,7 +18,6 @@ const ItemDetailContainer = (greeting)=>{
       promesa
         .then((documento) =>{
           setProductos({id: documento.id,...documento.data()})
-          console.log(documento.data())
         })
         .catch(()=>{
           console.log("Error")
@@ -29,31 +28,7 @@ const ItemDetailContainer = (greeting)=>{
 
   },[id])
 
-  // const getItem = ()=>{
-  //   fetch("https://mocki.io/v1/004be0d0-faee-458b-8bfc-f58bfaff8909")
-  //   .then(function (response){
-  //    return response.json();
-  //   }) 
-    
-  //   .then(function (data){
-  //     if(id){
-  //       const found = data.find(element => element.id === Number(id))
-  //       setProductos(found)
-  //     }else{
-  //       setProductos(data);
-  //     }
-
-
-  //   })
-  // } 
-     
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     getItem();
-  //   }, 2000);
-  // }, []);
-
-
+  
   
   if(productos.length === 0) {
     return <> <h4>Cargando productos</h4>
