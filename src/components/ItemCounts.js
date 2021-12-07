@@ -24,8 +24,8 @@ const ItemCount = ({stock, initial, onAdd}) =>{
         <div className="section"> 
         <button onClick={incrementar} >+</button>
         <button onClick={decrementar} >-</button>
-        <button disabled={contador <= 0} onClick={() => onAdd(contador)} className="waves-effect waves-light btn"style={{"margin": "10px"}}>Confirmar</button>
-        <p>Cantidad {contador}</p>
+        <button disabled={contador <= 0} onClick={() => onAdd(contador)} className="waves-effect waves-light btn contador">Confirmar</button>
+        <p>Cantidad : {contador}</p>
         </div>
         </div>
         </>

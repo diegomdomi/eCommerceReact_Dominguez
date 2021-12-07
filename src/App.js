@@ -1,3 +1,4 @@
+import "./App.css";
 import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
@@ -6,6 +7,7 @@ import Cart from "./components/Cart"
 import {CustomProvider} from "./components/cartContext.js"
 import Finalizado from "./components/Finalizado"
 import Formulario from "./components/Formulario"
+
 const App = ()=> {
   return(
     

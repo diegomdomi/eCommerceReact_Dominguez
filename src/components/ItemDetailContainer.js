@@ -11,7 +11,6 @@ const ItemDetailContainer = (greeting)=>{
   useEffect(() => {
 
     const db = firestore
-
     const collection = db.collection("items")
     const query = collection.doc(id)
     const promesa = query.get()
@@ -23,39 +22,33 @@ const ItemDetailContainer = (greeting)=>{
           console.log("Error")
         });
     
-
-
-
   },[id])
 
   
   
   if(productos.length === 0) {
     return <> <h4>Cargando productos</h4>
-    
-    <div class="preloader-wrapper big active">
-    <div class="spinner-layer spinner-blue-only">
-      <div class="circle-clipper left">
-        <div class="circle"></div>
-      </div><div class="gap-patch">
-        <div class="circle"></div>
-      </div><div class="circle-clipper right">
-        <div class="circle"></div>
+    <div className="preloader-wrapper big active">
+    <div className="spinner-layer spinner-blue-only">
+      <div className="circle-clipper left">
+      <div className="circle"></div>
+      </div><div className="gap-patch">
+      <div className="circle"></div>
+      </div><div className="circle-clipper right">
+      <div className="circle"></div>
       </div>
     </div>
-  </div>
+    </div>
     </>
   }
   else{
     return (
-     <> 
+    <> 
     <NavLink to="/"><h6 align="center">volver al catálogo</h6></NavLink>
     <h4 className="blue-text text-darken-2" align="center"> Detalle {greeting.text}</h4>
-    
     <ItemDetail  productos={productos} />
-
     </>
-    )
+  )
   
   }
 }

@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom"
 const NavBar = () => {
     return(
         <header>
-            <nav className=" red lighten-2">
+            <nav className=" red lighten-2" >
                 <div class="nav-wrapper container">
                 <NavLink  to="/" exact class="brand-logo" > Almacén Pastelero</NavLink>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">

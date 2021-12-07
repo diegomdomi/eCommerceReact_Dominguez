@@ -8,17 +8,18 @@ export const CustomProvider = ({children})=>{
     const [cart,setCart] = useState([])
     const [respuesta, setRespuesta] = useState([])
 
+    
     const agregarProducto = (producto,cantidad,id,img,price ) => {
         if(isInCart(id)){
             setCart(cart.map(item=>{
                 if(item.id === id){
-                item.cantidad += cantidad
+                    item.cantidad += cantidad
                 }
                 return item
             }))
         }else{
             setCart([...cart , {producto,cantidad,id,img,price }])
-
+            
         }
     }
 
@@ -42,20 +43,23 @@ export const CustomProvider = ({children})=>{
 
     const vaciarCarrito = () => { setCart([])}
 
+    
+    const  finalizarCompra = (props) => {
 
-    const  finalizarCompra = ()=>{
+         
         const usuario = {
-            nombre : "Diego",
-            email : "diegomdomi@gmail.com",
-            telefono : "4545454545",
+            nombre : props.nombre,
+            email : props.email,
+            telefono : props.telefono,
         }
-
+        
         const orden = {
             buyer : usuario,
             items : cart,
             date : firebase.firestore.Timestamp.fromDate(new Date()),
             total :totalCount()
         }
+        console.log(orden.date)
 
             const db = firestore
             const collection = db.collection("ordenes")
@@ -65,9 +69,11 @@ export const CustomProvider = ({children})=>{
                 setRespuesta(response.id)
             }) ;
                 
-          
-         vaciarCarrito()               
-    }
+            vaciarCarrito()     
+           
+            
+            }
+
     const valorContexto = {
         cart : cart,
         agregarProducto : agregarProducto,

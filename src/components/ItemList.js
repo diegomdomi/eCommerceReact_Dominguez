@@ -1,12 +1,9 @@
 import Item from "./Item.js"
-import { useEffect } from "react"
 
 const ItemList = ({productos}) => {
-    useEffect(()=>{console.log(productos)}, [])
 return (
     <div className="container">
-    <div className="row">
-        {
+        <div className="row">{
             productos.map(producto =>{
                 return <>
                         <Item
@@ -19,9 +16,8 @@ return (
                         />
                     </>
             })
-            
         } 
-    </div>
+        </div>
     </div>
     
 )    

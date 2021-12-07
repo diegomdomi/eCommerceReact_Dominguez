@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import {useParams}  from "react-router-dom"
 import {firestore}  from "./firebase"
 
 const ItemListContainer = (greeting)=>{
@@ -26,7 +25,7 @@ const ItemListContainer = (greeting)=>{
     return <> <h4>Cargando productos</h4>
     
     <div class="preloader-wrapper big active">
-    <div class="spinner-layer spinner-blue-only">
+      <div class="spinner-layer spinner-blue-only">
       <div class="circle-clipper left">
         <div class="circle"></div>
       </div><div class="gap-patch">
@@ -34,17 +33,15 @@ const ItemListContainer = (greeting)=>{
       </div><div class="circle-clipper right">
         <div class="circle"></div>
       </div>
+      </div>
     </div>
-  </div>
     </>
   }
   else{
-    return (
+    return(
      <> 
     <h3 className="blue-text text-darken-2" align="center"> Tienda {greeting.text}</h3>
-    
     <ItemList productos={productos} />
-
     </>
     )
 
