@@ -1,7 +1,20 @@
 .contador{
 margin: 10px;
 }
+.redes{
+    margin-top: 50px;
+}
+.encabezado h5{
+    margin-top: 2px;
+}
 
+.logo img{
+    width:25px;
+}
+.logo h6{
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 .imageDetail{
     padding: 1px;
@@ -11,9 +24,21 @@ margin: 10px;
     max-width: 80%;
     margin:auto
 }
+
+.seguirComprando{
+    font-size:15px;
+    background-color:green;
+    color:beige
+}
 .btnFinalizar{
-margin: 5px;
-background-color:beige;
-color:green
+    font-size:15px;
+    margin: 5px;
+    background-color:beige;
+    color:green
+}
+
+.vaciarCarrito{
+    background-color:red;
+    color:black
 }
 
