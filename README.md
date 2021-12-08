@@ -1,24 +1,40 @@
 # Proyecto realizado implementando React
+
 Proyecto desarrollado para el curso de React en Coderhouse,
 implementando un carrito de compras funcional.
-En la portada principal se accede al catálogo de productos disponibles para seleccionar y comprar.
+
+## _Funcionalidad_
+
+En la portada principal se accede al catálogo de productos de "Almacén Pastelero" disponibles para seleccionar y comprar.
 Al hacer click en el producto deseado, se puede observar el detalle del mismo y la posibilidad de agregar dicho producto al carrito de compras pudiendo elegir la cantidad deseada.
 AL confirmar el producto seleccionado, encontramos un botón que nos lleva a nuestro resumen de compra.
-Pudiendo allí finalizar la compra de ser requerido.
+Pudiendo allí,finalizar la compra, eliminar algún producto que ya no queremos comprar o seguir comprando.
+Al finalizar la compra, nos llevará a un formulario para completar con los datos solicitados, al presionar enviar, obtendremos el código "id" de compra.
 
 
-# Getting Started with Create React App
+# Proyecto inicializado Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue arrancado con[Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Frameworks
 
-In the project directory, you can run:
+ [Materialize](http://www.materializecss.com)
+
+ Este Framework trabaja bajo el concepto y diseño de Material Design de Google y ofrece un set de utilidades y componentes listos para implementarlos en nuestro proyecto, entre los elementos que utilicé  son: cards, menú y botones. Algunos estilos los copmplementé con css para adaptarlos a mi gusto.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ejecuta la aplicación en el modo de desarrollo.\
+Abrir [http://localhost:3000](http://localhost:3000)para verlo en el navegador.
+
+## Convenciones
+
+Implementación 
+-React Router Dom
+-Firebase
+
+## Video funcionalidad del proyecto de
+
 
 
 

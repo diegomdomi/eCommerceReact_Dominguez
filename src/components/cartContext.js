@@ -7,6 +7,8 @@ export const{Provider} = contexto
 export const CustomProvider = ({children})=>{
     const [cart,setCart] = useState([])
     const [respuesta, setRespuesta] = useState([])
+    const [fecha, setFecha] = useState([])
+
 
     
     const agregarProducto = (producto,cantidad,id,img,price ) => {
@@ -57,9 +59,9 @@ export const CustomProvider = ({children})=>{
             buyer : usuario,
             items : cart,
             date : firebase.firestore.Timestamp.fromDate(new Date()),
-            total :totalCount()
+            total :totalCount(),
         }
-        console.log(orden.date)
+            setFecha(orden.date.toDate())
 
             const db = firestore
             const collection = db.collection("ordenes")
@@ -83,6 +85,7 @@ export const CustomProvider = ({children})=>{
         totalCount : totalCount,
         finalizarCompra : finalizarCompra,
         respuesta : respuesta,
+        fecha : fecha,
     }
 
     return(

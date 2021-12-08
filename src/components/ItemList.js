@@ -2,6 +2,7 @@ import Item from "./Item.js"
 
 const ItemList = ({productos}) => {
 return (
+    
     <div className="container">
         <div className="row">{
             productos.map(producto =>{
