@@ -12,7 +12,7 @@ Pudiendo allí,finalizar la compra, eliminar algún producto que ya no queremos 
 Al finalizar la compra, nos llevará a un formulario para completar con los datos solicitados, al presionar enviar, obtendremos el código "id" de compra.
 
 
-# Proyecto inicializado Create React App
+## Proyecto inicializado Create React App
 
 Este proyecto fue arrancado con[Create React App](https://github.com/facebook/create-react-app).
 
@@ -22,18 +22,25 @@ Este proyecto fue arrancado con[Create React App](https://github.com/facebook/cr
 
  Este Framework trabaja bajo el concepto y diseño de Material Design de Google y ofrece un set de utilidades y componentes listos para implementarlos en nuestro proyecto, entre los elementos que utilicé  son: cards, menú y botones. Algunos estilos los copmplementé con css para adaptarlos a mi gusto.
 
+## Repositorio alojado en Netlyfy
+
+![Netlyfy](https://ecommerce-pastelero.netlify.app/)
+
+Netlify es una empresa que ofrece servicios de alojamiento y backend para aplicaciones web y sitios web estáticos
+
+
 ### `npm start`
 
 Ejecuta la aplicación en el modo de desarrollo.\
 Abrir [http://localhost:3000](http://localhost:3000)para verlo en el navegador.
 
-## Convenciones
+### Convenciones
 
 Implementación 
--React Router Dom
--Firebase
+- React Router Dom
+- Firebase
 
-## Video funcionalidad del proyecto de
+## Video demostrativo de la funcionalidad del proyecto 
 
 
 
