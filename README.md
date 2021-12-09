@@ -43,6 +43,6 @@ Implementación
 
 ## Video demostrativo de la funcionalidad del proyecto 
 
-
+![AnimationtpFinal](https://user-images.githubusercontent.com/60094047/145280211-1554863c-aeed-4904-8990-12d8536ff24f.gif)
 
 
