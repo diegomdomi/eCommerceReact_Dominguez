@@ -22,6 +22,12 @@ Este proyecto fue arrancado con[Create React App](https://github.com/facebook/cr
 
  Este Framework trabaja bajo el concepto y diseño de Material Design de Google y ofrece un set de utilidades y componentes listos para implementarlos en nuestro proyecto, entre los elementos que utilicé  son: cards, menú y botones. Algunos estilos los copmplementé con css para adaptarlos a mi gusto.
 
+## Repositorio alojado en Netlyfy
+
+![Netlyfy](https://ecommerce-pastelero.netlify.app/)
+
+Netlify es una empresa que ofrece servicios de alojamiento y backend para aplicaciones web y sitios web estáticos
+
 
 
 ### `npm start`
