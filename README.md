@@ -24,7 +24,7 @@ Este proyecto fue arrancado con[Create React App](https://github.com/facebook/cr
 
 ## Repositorio alojado en Netlyfy
 
-![Netlyfy](https://ecommerce-pastelero.netlify.app/)
+[Netlyfy](https://ecommerce-pastelero.netlify.app/)
 
 Netlify es una empresa que ofrece servicios de alojamiento y backend para aplicaciones web y sitios web estáticos
 
